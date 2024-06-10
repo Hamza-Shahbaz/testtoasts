@@ -6,10 +6,7 @@ import viteCompression from 'vite-plugin-compression';
 import purgecss from 'vite-plugin-purgecss';
 
 export default defineConfig({
-  plugins: [react(), visualizer(), viteCompression(), purgecss({
-    content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
-    safelist: [/Toastify__toast-container/, /Toastify__toast/, /Toastify__toast--success/, /Toastify__toast--error/]
-  })],
+  plugins: [react(), visualizer(), viteCompression()],
   build: {
     rollupOptions: {
       output: {
